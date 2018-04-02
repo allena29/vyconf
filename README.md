@@ -83,10 +83,16 @@ If you are new to OCaml, you need to install [opam](http://opam.ocaml.org/)
 first. Then install the correct version of the compiler, the build tools, and
 the build dependencies:
 
+**Darwin**
+```
+brew install opam
+opam init
+```
+
 ```
 opam switch 4.03.0
 opam install oasis
-opam install fileutils lwt ocplib-endian ounit pcre ppx_deriving_yojson sha toml xml-light batteries
+opam install fileutils lwt ocplib-endian ounit pcre ppx_deriving_yojson sha toml xml-light batteries ocaml-protoc
 ```
 
 To build the project and run the unit tests, do this:
@@ -113,3 +119,16 @@ Emacs, consider installing [tuareg-mode](https://github.com/ocaml/tuareg).
 
 Don't hesitate to ask if you have any setup or build issues, and specifically for OCaml issues,
 there's #ocaml channel on Freenode too.
+
+
+# My Notes
+
+start the daemon
+
+```
+sudo ./vyconfd.native --config brewerslab/vyconfd.conf  --no-daemon
+```
+
+Then we can use vycli.native - but it's not interactive.
+
+For now looking at vyconfd (although it's legacy)
